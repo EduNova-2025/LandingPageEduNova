@@ -21,7 +21,9 @@ const LandingPage = () => {
           transition={{ delay: 0.5, duration: 1 }} 
           className="hero-text"
         >
-          La plataforma que transforma la educación primaria con tecnología y planificación inteligente.
+          La plataforma que revoluciona la educación de quinto grado de primaria, 
+          utilizando tecnología para una planificación eficiente de planes de clase 
+          alineados al currículo del MINED.
         </motion.p>
         <motion.a 
           href="https://project-edunova-2025.netlify.app/" 
@@ -49,7 +51,11 @@ const LandingPage = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          EduNova es una iniciativa educativa nacional que brinda herramientas digitales para docentes de primaria, facilitando la planificación, asistencia y evaluación del aprendizaje.
+          EduNova es una plataforma educativa que ofrece herramientas digitales
+            innovadoras para docentes de quinto grado de primaria, simplificando la
+            planificación de clases, brindando asistencia técnica, proporcionando 
+            recursos educativos de calidad, y fomentando el trabajo en equipo y la 
+            participación activa en foros educativos.
         </motion.p>
       </section>
 
@@ -67,15 +73,15 @@ const LandingPage = () => {
           {[ 
             {
               title: "Planificación Eficiente",
-              desc: "Optimiza el tiempo docente con herramientas inteligentes para planificar clases."
+              desc: "Optimiza el tiempo de los docentes con herramientas inteligentes que facilitan la planificación de clases, permitiendo una gestión más eficiente y centrada en las necesidades educativas de los estudiantes."
             },
             {
-              title: "Seguimiento de Asistencia",
-              desc: "Registra y visualiza la asistencia de los estudiantes en tiempo real."
+              title: "Documentos educativos",
+              desc: "Ofrece una amplia variedad de documentos y archivos educativos diseñados para facilitar estrategias de enseñanza efectivas para estudiantes de quinto grado de primaria."
             },
             {
               title: "Acceso desde cualquier lugar",
-              desc: "Disponible en versión móvil y web progresiva (PWA)."
+              desc: "Disponible en versión móvil y web progresiva (PWA), brindando acceso flexible y optimizado desde cualquier dispositivo."
             },
           ].map((item, i) => (
             <motion.div 
@@ -109,10 +115,10 @@ const LandingPage = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          <li>Gestión de planes de clase integrados con currículo oficial.</li>
-          <li>Registro automático de asistencia y generación de reportes.</li>
-          <li>Chatbot educativo integrado con IA y Firebase.</li>
-          <li>Interfaz amigable, adaptable y accesible para todos los docentes.</li>
+          <li>Gestión de planes de clase completamente integrados con el currículo oficial, facilitando la planificación educativa alineada a los estándares.</li>
+          <li>Chatbot educativo integrado con inteligencia artificial y Firebase, ofreciendo soporte interactivo y personalizado para docentes.</li>
+          <li>Interfaz amigable, adaptable y accesible para todos los docentes, garantizando una experiencia de usuario fluida y eficiente en cualquier dispositivo.</li>
+          <li>isponibilidad de documentos educativos para la mejora de planificación y enseñanza.</li>
         </motion.ul>
       </section>
 
@@ -127,7 +133,7 @@ const LandingPage = () => {
           Capturas de Pantalla
         </motion.h2>
         <div className="screenshot-gallery">
-          {["/public/img/Teleclases.png", "/public/img/ChatBot IA.png", "/public/img/Biblioteca virtual.png"].map((src, i) => (
+          {["/img/Teleclases.png", "/img/ChatBot IA.png", "/img/Biblioteca virtual.png"].map((src, i) => (
             <motion.img 
               key={i}
               src={src} 
