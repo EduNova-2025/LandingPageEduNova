@@ -9,7 +9,7 @@ const LandingPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="hero">
+      <section id="home" className="hero">
         <motion.h1 
           initial={{ opacity: 0, y: -50 }} 
           animate={{ opacity: 1, y: 0 }} 
