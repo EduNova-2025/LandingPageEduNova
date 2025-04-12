@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Navbar, Container, Nav } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Header = () => {
   const [expanded, setExpanded] = useState(false);
@@ -12,45 +10,36 @@ const Header = () => {
     setExpanded(false);
   };
 
+  const navLinks = [
+    { id: 'quienes-somos', text: 'Quiénes Somos' },
+    { id: 'beneficios', text: 'Beneficios' },
+    { id: 'caracteristicas', text: 'Características' },
+    { id: 'capturas', text: 'Capturas' }
+  ];
+
   return (
     <Navbar 
       expanded={expanded}
       expand="lg" 
       fixed="top" 
-      className="header bg-white"
+      className="navbar py-3"
     >
       <Container>
-        <Navbar.Brand className="logo">EduNova</Navbar.Brand>
+        <Navbar.Brand>EduNova</Navbar.Brand>
         <Navbar.Toggle 
-          aria-controls="navbar-nav" 
+          aria-controls="basic-navbar-nav"
           onClick={() => setExpanded(expanded ? false : "expanded")}
         />
-        <Navbar.Collapse id="navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link 
-              onClick={() => scrollToSection('quienes-somos')}
-              className="nav-link"
-            >
-              Quiénes Somos
-            </Nav.Link>
-            <Nav.Link 
-              onClick={() => scrollToSection('beneficios')}
-              className="nav-link"
-            >
-              Beneficios
-            </Nav.Link>
-            <Nav.Link 
-              onClick={() => scrollToSection('caracteristicas')}
-              className="nav-link"
-            >
-              Características
-            </Nav.Link>
-            <Nav.Link 
-              onClick={() => scrollToSection('capturas')}
-              className="nav-link"
-            >
-              Capturas
-            </Nav.Link>
+            {navLinks.map(({ id, text }) => (
+              <Nav.Link 
+                key={id}
+                onClick={() => scrollToSection(id)}
+              >
+                {text}
+              </Nav.Link>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>

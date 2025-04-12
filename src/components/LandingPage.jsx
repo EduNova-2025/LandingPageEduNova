@@ -1,55 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Header from './Header';
 import '../App.css';
 
 const LandingPage = () => {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div className="landing-page">
-      {/* Header */}
-      <motion.header 
-        className="header"
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="logo">EduNova</div>
-        <nav className="nav-links">
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('quienes-somos')}
-          >
-            Quiénes Somos
-          </motion.button>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('beneficios')}
-          >
-            Beneficios
-          </motion.button>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('caracteristicas')}
-          >
-            Características
-          </motion.button>
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => scrollToSection('capturas')}
-          >
-            Capturas
-          </motion.button>
-        </nav>
-      </motion.header>
-
+      <Header />
+      
       {/* Hero Section */}
       <section className="hero">
         <motion.h1 
