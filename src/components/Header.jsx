@@ -22,7 +22,7 @@ const Header = () => {
 
   const navLinks = [
     { id: 'home', text: 'Inicio' },
-    { id: 'quienes-somos', text: 'Quiénes Somos' },
+    { id: 'quienes-somos', text: '¿Quiénes Somos?' },
     { id: 'beneficios', text: 'Beneficios' },
     { id: 'caracteristicas', text: 'Características' },
     { id: 'capturas', text: 'Capturas' }
