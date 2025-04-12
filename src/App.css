@@ -200,3 +200,68 @@ html, body {
     grid-template-columns: repeat(3, 1fr); /* Tres columnas para escritorios */
   }
 }
+
+.header {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para navegación desktop */
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Estilos para el menú lateral en móvil */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    height: 100vh !important;
+    width: 280px;
+    transition: 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem 1rem;
+    z-index: 1000;
+  }
+
+  .navbar-collapse.show {
+    right: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+}
+
+.navbar-toggler {
+  z-index: 1001;
+}
+
+.nav-link {
+  color: #333 !important;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+  background: rgba(0, 123, 255, 0.1);
+}
+
+.nav-link.active {
+  color: #007bff !important;
+  background: rgba(0, 123, 255, 0.1);
+  font-weight: 600;
+}
+
+.landing-page {
+  padding-top: 76px;
+}
+
