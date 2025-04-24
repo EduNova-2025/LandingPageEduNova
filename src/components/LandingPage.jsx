@@ -136,7 +136,7 @@ const LandingPage = () => {
           Capturas de Pantalla
         </motion.h2>
         <div className="screenshot-gallery">
-          {["/img/Teleclases.png", "/img/ChatBot IA.png", "/img/Biblioteca virtual.png"].map((src, i) => (
+          {["/img/teleclase.png", "/img/chatbot.png", "/img/biblioteca.png"].map((src, i) => (
             <motion.img 
               key={i}
               src={src} 
