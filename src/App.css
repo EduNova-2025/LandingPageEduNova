@@ -294,3 +294,51 @@ html, body {
   padding-top: 76px;
 }
 
+.btn-iniciar-sesion {
+  background: linear-gradient(135deg, #1a23a8, #6c1a8d, #d333a3);
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none; /* 👈 Elimina el subrayado */
+  display: inline-block; /* Asegura que se comporta como botón */
+}
+
+
+.btn-iniciar-sesion:hover {
+  background: #3c48f6;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.btn-iniciar-sesion::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.75s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: 0;
+}
+
+.btn-iniciar-sesion:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+}
+
+.btn-iniciar-sesion:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(246, 157, 60, 0.4);
+}

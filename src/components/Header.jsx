@@ -154,12 +154,7 @@ const Header = () => {
   }, [activeIndex]);
 
   return (
-    <Navbar 
-      expanded={expanded}
-      expand="lg" 
-      fixed="top" 
-      className="navbar py-3"
-    >
+    <Navbar expanded={expanded} expand="lg" fixed="top" className="navbar py-3">
       <Container>
         <Navbar.Brand onClick={() => scrollToSection('home')} style={{ cursor: 'pointer' }}>
           EduNova
@@ -185,6 +180,17 @@ const Header = () => {
             </nav>
             <span className="effect filter" ref={filterRef}></span>
             <span className="effect text" ref={textRef}></span>
+          </div>
+
+          {/* Botón de Iniciar sesión */}
+          <div className="ms-3 d-flex align-items-center">
+            <a
+              href="https://project-edunova-2025.netlify.app/login"
+              className="btn-iniciar-sesion"
+              style={{ borderRadius: "20px", padding: "6px 18px" }}
+            >
+              Registrarse
+            </a>
           </div>
         </Navbar.Collapse>
       </Container>
