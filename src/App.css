@@ -89,7 +89,7 @@ html, body {
 
 .benefit-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -111,7 +111,7 @@ html, body {
 /* Screenshot Gallery */
 .screenshot-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
@@ -121,6 +121,26 @@ html, body {
   width: 100%;
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Circular Gallery */
+.circular-gallery-container {
+  height: 600px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.circular-gallery {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.circular-gallery:active {
+  cursor: grabbing;
 }
 
 /* CTA Section */
