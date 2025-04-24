@@ -72,7 +72,7 @@ const LandingPage = () => {
         >
           Beneficios
         </motion.h2>
-        <div className="benefit-cards">
+        <div className="benefit-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
           {[ 
             {
               title: "Planificación Eficiente",
@@ -135,7 +135,7 @@ const LandingPage = () => {
         >
           Capturas de Pantalla
         </motion.h2>
-        <div className="screenshot-gallery">
+        <div className="screenshot-gallery" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
           {["/img/teleclase.png", "/img/chatbot.png", "/img/biblioteca.png"].map((src, i) => (
             <motion.img 
               key={i}
@@ -180,6 +180,7 @@ const LandingPage = () => {
           whileInView={{ opacity: 1, y: 0 }} 
           transition={{ duration: 1 }}
         >
+          {/* Un poco sobre EduNova */}
           Mira cómo funciona EduNova
         </motion.h2>
         <motion.div 
