@@ -189,10 +189,22 @@ const LandingPage = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          <video controls className="feature-video">
-            <source src="/video/demo.mp4" type="video/mp4" />
-            Tu navegador no soporta videos HTML5.
-          </video>
+          <video 
+            controls 
+            className="feature-video" 
+            preload="metadata" 
+            poster="/img/poster-edunova.jpg" // opcional, si quieres una imagen previa
+            style={{
+              width: "100%",
+              maxWidth: "800px",
+              borderRadius: "16px",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.1)"
+            }}
+          >
+      <source src="/videos/intro-edunova.mp4" type="video/mp4" />
+      Tu navegador no soporta la etiqueta de video.
+    </video>
+
         </motion.div>
       </section>
     </div>
