@@ -342,3 +342,23 @@ html, body {
   outline: none;
   box-shadow: 0 0 0 3px rgba(246, 157, 60, 0.4);
 }
+
+
+/* Estilos para la sección de video */
+.video-section {
+  background-color: #f0f4fa;
+  color: #34495e;
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-video {
+  width: 100%;
+  display: block;
+}

@@ -72,7 +72,7 @@ const LandingPage = () => {
         >
           Beneficios
         </motion.h2>
-        <div className="benefit-cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+        <div className="benefit-cards">
           {[ 
             {
               title: "Planificación Eficiente",
@@ -135,7 +135,7 @@ const LandingPage = () => {
         >
           Capturas de Pantalla
         </motion.h2>
-        <div className="screenshot-gallery" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+        <div className="screenshot-gallery">
           {["/img/teleclase.png", "/img/chatbot.png", "/img/biblioteca.png"].map((src, i) => (
             <motion.img 
               key={i}
@@ -170,6 +170,29 @@ const LandingPage = () => {
             
           Acceder a EduNova ahora
         </motion.a>
+      </section>
+      
+      {/* Sección de Video */}
+      <section id="video-demo" className="section video-section">
+        <motion.h2 
+          className="section-title" 
+          initial={{ opacity: 0, y: 50 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1 }}
+        >
+          Mira cómo funciona EduNova
+        </motion.h2>
+        <motion.div 
+          className="video-container"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+        >
+          <video controls className="feature-video">
+            <source src="/video/demo.mp4" type="video/mp4" />
+            Tu navegador no soporta videos HTML5.
+          </video>
+        </motion.div>
       </section>
     </div>
   );
